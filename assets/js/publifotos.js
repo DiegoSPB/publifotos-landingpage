@@ -251,7 +251,7 @@
     var revoSaas = $( '.revo-slider-saas' );
     if ( revoSaas.length > 0 ) {
       $('.revo-slider-saas').show().revolution({
-        sliderType:"hero",        
+        sliderType:"hero",
         sliderLayout:"fullscreen",
         dottedOverlay:"none",
         delay:9000,
@@ -427,7 +427,6 @@
       var $menuItemLink = $(this).find('a'),
           $menuItemLinkText = $menuItemLink.text();
       $menuItemLink.append( '<span class="scroller-tooltip">' + $menuItemLinkText + '</span>' );
-      console.log($menuItemLinkText);
     });
 
     // Scroll Spy
@@ -721,7 +720,7 @@
     } );
 
     }); // End document ready
-    
+
 
     /** Infinite Scroll & Isotope init */
     var $masonryGrid = $('.masonry-grid');
