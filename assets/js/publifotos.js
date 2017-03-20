@@ -773,5 +773,20 @@
   $customizerToggle.on( 'click', function () {
       $( '.customizer' ).toggleClass( 'active' );
   } );
+  function fixForAos(selector){
+        var animatedElements = $(selector);
+        if (animatedElements.length && $('html').hasClass('touch')) {
+          animatedElements.each(function(i, el) {
+            var $el = $(el);
+            var animation = $el.attr('data-aos');
+            if (animation === "") {
+              return true;
+            }
+            $el.parents('.row').css('overflow-x', 'hidden');
+          })
+        }
+      }
+  //And This part, should be inside document ready function
+  fixForAos('[data-aos]');
 
 })(jQuery);
